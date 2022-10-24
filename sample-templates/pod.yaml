@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: rstudio-7486
+  name: rstudio-7486
+spec:
+  containers:
+  - env:
+    - name: USER
+      value: "renci"
+    image: muralikarthikk/rstudio:test-0.1.12
+    imagePullPolicy: Always
+    name: rstudio-7486
+    ports:
+    - containerPort: 8080
+      protocol: TCP
+    resources:
+      limits:
+        cpu: 250m
+        ephemeral-storage: 256Mi
+        memory: 256Mi
+      requests:
+        cpu: 10m
+        ephemeral-storage: 50Mi
+        memory: 128Mi
+  restartPolicy: Always
+#  securityContext:
+#    fsGroup: 2000
+#    runAsGroup: 2000
+#    runAsUser: 2000
