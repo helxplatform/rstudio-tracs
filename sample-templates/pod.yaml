@@ -8,8 +8,10 @@ spec:
   containers:
   - env:
     - name: USER
-      value: "renci"
-    image: muralikarthikk/rstudio:test-0.1.12
+      value: "murali_karthik"
+    - name: NB_PREFIX
+      value: "/private/rstudio/murali_karthik/7486"
+    image: muralikarthikk/rstudio:test-0.1.19
     imagePullPolicy: Always
     name: rstudio-7486
     ports:

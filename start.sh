@@ -1,6 +1,13 @@
 #!/bin/bash
 
-groupadd -g 1001 renci
-useradd -u 1001 -g 1001 renci
+echo "Processing files"
+python3 ./process.py
+
+echo "Creating group and user"
+groupadd -g 1136 ${USER}
+useradd -u 30000 -g 1136 ${USER}
+
+echo "Starting Nginx"
 /etc/init.d/nginx restart
+
 /init

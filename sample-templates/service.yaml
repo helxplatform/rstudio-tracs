@@ -10,8 +10,8 @@ metadata:
       add_request_headers:
         X-Forwarded-Proto: https
 
-      prefix: /private/rstudio/renci/7486/
-      rewrite: /private/rstudio/renci/7486/
+      prefix: /private/rstudio/murali_karthik/7486/
+      rewrite: /private/rstudio/murali_karthik/7486/
       service: rstudio-7486:8080
 
       headers:

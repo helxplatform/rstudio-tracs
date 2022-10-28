@@ -2,8 +2,10 @@ FROM rocker/rstudio:latest
 
 COPY rserver.conf /etc/rstudio/rserver.conf
 RUN sudo apt-get update -y && \
-    sudo apt-get install nginx -y
+    sudo apt-get install nginx python3.6 -y
 COPY default.conf /etc/nginx/conf.d/default.conf
+COPY process.py ./process.py
+RUN chmod +x ./process.py
 COPY start.sh ./start.sh
 RUN chmod +x ./start.sh
 EXPOSE 8080
