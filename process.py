@@ -12,4 +12,4 @@ def process_files(files):
 
 
 if __name__ == "__main__":
-    process_files(files=["/etc/rstudio/rserver.conf", "/etc/nginx/conf.d/default.conf"])
+    process_files(files=["/rserver.conf", "/etc/nginx/conf.d/default.conf"])

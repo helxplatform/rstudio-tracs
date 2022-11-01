@@ -1,6 +1,6 @@
 FROM rocker/rstudio:latest
 
-COPY rserver.conf /etc/rstudio/rserver.conf
+COPY rserver.conf ./rserver.conf
 RUN sudo apt-get update -y && \
     sudo apt-get install nginx python3.6 -y
 COPY default.conf /etc/nginx/conf.d/default.conf
