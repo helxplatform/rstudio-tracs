@@ -1,4 +1,4 @@
-FROM rocker/rstudio:latest
+FROM rocker/verse:latest
 
 COPY rserver.conf ./rserver.conf
 RUN sudo apt-get update -y && \
